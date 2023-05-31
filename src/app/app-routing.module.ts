@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'sport',
+    loadChildren: () => import('./pages/sport/sport.module').then( m => m.SportPageModule)
+  },
+  {
+    path: 'entertainment',
+    loadChildren: () => import('./pages/entertainment/entertainment.module').then( m => m.EntertainmentPageModule)
+  },
+  {
+    path: 'technology',
+    loadChildren: () => import('./pages/technology/technology.module').then( m => m.TechnologyPageModule)
+  },
+  {
+    path: 'business',
+    loadChildren: () => import('./pages/business/business.module').then( m => m.BusinessPageModule)
+  },
+  {
+    path: 'health',
+    loadChildren: () => import('./pages/health/health.module').then( m => m.HealthPageModule)
+  },
 ];
 
 @NgModule({
